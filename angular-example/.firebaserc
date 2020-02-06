@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngstore-6d00e": {
+      "hosting": {
+        "angular-example": [
+          "ngstore-6d00e"
+        ]
+      }
+    }
+  }
+}
