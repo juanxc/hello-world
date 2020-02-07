@@ -15,10 +15,14 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.sendGetRequest().pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>) => {
+    this.apiService.get().subscribe((data: any[])=>{  
+			console.log(data);  
+			this.products = data;  
+		})
+    /*this.apiService.get().pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>) => {
       console.log(res);
       this.products = res.body;
-    });
+    });*/
   }
 
   public firstPage() {
